@@ -8,8 +8,10 @@ namespace BLL_Epreuve.Entities
 {
     public enum CritereEco
     {
-        EmpreinteCarbone,
-        PollutionAir,
-        UtilisationPesticides
+       A,
+       B,
+       C,
+       D,
+       E
     }
 }
