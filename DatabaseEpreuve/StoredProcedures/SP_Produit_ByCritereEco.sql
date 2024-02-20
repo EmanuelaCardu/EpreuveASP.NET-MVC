@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE [dbo].[SP_Produit_CritereEco]
+﻿CREATE PROCEDURE [dbo].[SP_Produit_ByCritereEco]
 	@CritereEco varchar(50)
 	
 AS
@@ -7,6 +7,6 @@ AS
 			[Description]
 			[PrixProduit],
 			[CritereEco],
-			[Categorie]
+			[Id_Categorie]
    FROM [Produit]
    WHERE [CritereEco] = @CritereEco

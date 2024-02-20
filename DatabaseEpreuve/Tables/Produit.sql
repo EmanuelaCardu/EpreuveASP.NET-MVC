@@ -5,8 +5,8 @@
     [Description] VARCHAR(1000) NOT NULL, 
     [PrixProduit] DECIMAL NOT NULL, 
     [CritereEco] VARCHAR(50) NOT NULL, 
-    [Categorie] VARCHAR(50) NOT NULL, 
+    [Id_Categorie] INT NOT NULL, 
 
     CONSTRAINT [FK_Produit_CritereEco] FOREIGN KEY ([CritereEco]) REFERENCES [CritereEco]([CritereEco]), 
-    CONSTRAINT [FK_Produit_Categorie] FOREIGN KEY ([Categorie]) REFERENCES [Categorie]([Categorie])
+    CONSTRAINT [FK_Produit_Categorie] FOREIGN KEY ([Id_Categorie]) REFERENCES [Categorie]([Id_Categorie])
 )

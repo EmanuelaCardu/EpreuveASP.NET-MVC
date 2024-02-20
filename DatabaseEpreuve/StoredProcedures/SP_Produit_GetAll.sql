@@ -5,5 +5,5 @@ AS
 			[Description]
 			[PrixProduit],
 			[CritereEco],
-			[Categorie]
+			[Id_Categorie]
 		FROM [Produit]

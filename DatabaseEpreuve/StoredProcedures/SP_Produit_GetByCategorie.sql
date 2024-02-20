@@ -1,5 +1,5 @@
 ﻿CREATE PROCEDURE [dbo].[SP_Produit_GetByCategorie]
-	@Categorie varchar(50)
+	@Id_Categorie int
 	
 AS
 	SELECT [Id_Produit],
@@ -7,6 +7,6 @@ AS
 			[Description]
 			[PrixProduit],
 			[CritereEco],
-			[Categorie]
+			[Id_Categorie]
    FROM [Produit]
-   WHERE [Categorie] = @Categorie
+   WHERE [Id_Categorie] = @Id_Categorie

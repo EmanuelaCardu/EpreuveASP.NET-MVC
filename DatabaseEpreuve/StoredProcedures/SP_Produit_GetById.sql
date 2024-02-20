@@ -5,7 +5,7 @@ AS
 			[NomProduit],
 			[Description],
 			[PrixProduit],
-			[CritereEco]
-			[Categorie]
+			[CritereEco],
+			[Id_Categorie]
 		FROM [Produit]
 		WHERE [Id_Produit] = @Id_produit

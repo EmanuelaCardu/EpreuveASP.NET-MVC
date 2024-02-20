@@ -72,7 +72,7 @@
     <Build Include="StoredProcedures\SP_Produit_Update.sql" />
     <Build Include="StoredProcedures\SP_Produit_GetByNomProduit.sql" />
     <Build Include="StoredProcedures\SP_Produit_GetByCategorie.sql" />
-    <Build Include="StoredProcedures\SP_Produit_CritereEco.sql" />
+    <Build Include="StoredProcedures\SP_Produit_ByCritereEco.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="DatabaseEpreuve.refactorlog" />
