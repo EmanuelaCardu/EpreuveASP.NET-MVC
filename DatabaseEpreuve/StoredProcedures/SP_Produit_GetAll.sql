@@ -2,7 +2,7 @@
 AS
 	SELECT	[Id_Produit],
 			[NomProduit],
-			[Description]
+			[Description],
 			[PrixProduit],
 			[CritereEco],
 			[Id_Categorie]
