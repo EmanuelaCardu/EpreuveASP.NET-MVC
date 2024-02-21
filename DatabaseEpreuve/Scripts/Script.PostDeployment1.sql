@@ -15,11 +15,11 @@ Post-Deployment Script Template
 
 INSERT INTO [dbo].[CritereEco] ([CritereEco])
 VALUES 
-    ('CritereEcoA'),
-    ('CritereEcoB'),
-    ('CritereEcoC'),
-    ('CritereEcoD'),
-    ('CritereEcoE');
+    ('A'),
+    ('B'),
+    ('C'),
+    ('D'),
+    ('E');
 
 INSERT INTO [dbo].[Categorie] ([NomCategorie], [Description])
 VALUES 
@@ -38,9 +38,9 @@ VALUES
 
 INSERT INTO [dbo].[Produit] ([NomProduit], [Description], [PrixProduit], [CritereEco], [Id_Categorie])
 VALUES 
-    ('Produit 1', 'Description du produit 1', 10.99, 'CritereEcoA', 1),
-    ('Produit 2', 'Description du produit 2', 20.50, 'CritereEcoB', 2),
-    ('Produit 3', 'Description du produit 3', 15.75, 'CritereEcoC', 1),
-    ('Produit 4', 'Description du produit 4', 30.25, 'CritereEcoD', 3),
-    ('Produit 5', 'Description du produit 5', 12.00, 'CritereEcoE', 2);
+    ('Produit 1', 'Description du produit 1', 10.99, 'A', 1),
+    ('Produit 2', 'Description du produit 2', 20.50, 'B', 2),
+    ('Produit 3', 'Description du produit 3', 15.75, 'C', 1),
+    ('Produit 4', 'Description du produit 4', 30.25, 'D', 3),
+    ('Produit 5', 'Description du produit 5', 12.00, 'E', 2);
 

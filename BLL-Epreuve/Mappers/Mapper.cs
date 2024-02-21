@@ -37,18 +37,7 @@ namespace BLL_Epreuve.Mappers
                 Id_Categorie = entity.Id_Categorie
             };
         }
-        public static BLL.Produit GetByCritereEco(this DAL.Produit entity)
-        {
-            if (entity is null) return null;
-            return new BLL.Produit(
-                   entity.Id_Produit,
-                entity.NomProduit,
-                entity.Description,
-                entity.PrixProduit,
-                entity.CritereEco,
-                entity.Id_Categorie
-                );
-        }
+       
 
 
     }

@@ -26,7 +26,8 @@ namespace ASP_Epreuve.Controllers
         // GET: ProduitController/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            ProduitDetailsViewModel model = _produitRepository.Get(id).ToDetails();
+            return View(model);
         }
 
         // GET: ProduitController/Create
@@ -38,11 +39,14 @@ namespace ASP_Epreuve.Controllers
         // POST: ProduitController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public ActionResult Create(ProduitCreateForm form)
         {
             try
             {
-                return RedirectToAction(nameof(Index));
+                if (form is null) ModelState.AddModelError(nameof(form), "Pas de données reçues");
+                if (!ModelState.IsValid) throw new Exception();
+                int id = _produitRepository.Insert(form.ToBLL());
+                return RedirectToAction(nameof(Details), new { id });
             }
             catch
             {

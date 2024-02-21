@@ -16,14 +16,14 @@ namespace BLL_Epreuve.Entities
         public string CritereEco { get; set; }
         public int Id_Categorie { get; set; }
 
-        public Produit(int id_Produit, string nomProduit, string description, decimal prixProduit, string critereEco, int Id_Categorie)
+        public Produit(int id_Produit, string nomProduit, string description, decimal prixProduit, string critereEco, int id_Categorie)
         {
             Id_Produit = id_Produit;
             NomProduit = nomProduit;
             Description = description;
             PrixProduit = prixProduit;
             CritereEco = critereEco;
-            Id_Categorie = Id_Categorie;
+           Id_Categorie = id_Categorie;
         }
     }
 }
