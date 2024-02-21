@@ -20,7 +20,7 @@ namespace DAL_Epreuve.Mappers
                 Description = (string)record["Description"],
                 PrixProduit = (decimal)record["PrixProduit"],
                 CritereEco = (string)record["CritereEco"],
-                Categorie = (string)record["Categorie"]
+                Id_Categorie = (int)record["Id_Categorie"]
 
             };
         }

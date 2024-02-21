@@ -85,7 +85,7 @@ namespace DAL_Epreuve.Services
                     command.Parameters.AddWithValue("Description", data.Description);
                     command.Parameters.AddWithValue("PrixProduit", data.PrixProduit);
                     command.Parameters.AddWithValue("CritereEco", data.CritereEco);
-                    command.Parameters.AddWithValue("Categorie", data.Categorie);
+                    command.Parameters.AddWithValue("Id_Categorie", data.Id_Categorie);
                   
                     connection.Open();
                     return (int)command.ExecuteScalar();
@@ -106,7 +106,7 @@ namespace DAL_Epreuve.Services
                     command.Parameters.AddWithValue("Description", data.Description);
                     command.Parameters.AddWithValue("PrixProduit", data.PrixProduit);
                     command.Parameters.AddWithValue("CritereEco", data.CritereEco);
-                    command.Parameters.AddWithValue("Categorie", data.Categorie);
+                    command.Parameters.AddWithValue("Id_Categorie", data.Id_Categorie);
 
                     connection.Open();
                     if (command.ExecuteNonQuery() <= 0)

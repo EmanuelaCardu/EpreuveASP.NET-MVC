@@ -1,4 +1,5 @@
 ﻿using BLL_Epreuve.Entities;
+using BLL_Epreuve.Mappers;
 using Shared.Repositories;
 using System;
 using System.Collections.Generic;
@@ -31,17 +32,37 @@ namespace BLL_Epreuve.Services
 
         public Produit Get(int id)
         {
-            throw new NotImplementedException();
+            return _produitRepository.Get(id).ToBLL();
         }
 
         public int Insert(Produit data)
         {
-            throw new NotImplementedException();
+            return _produitRepository.Insert(data.ToDAL());
         }
 
         public void Update(Produit data)
         {
-            throw new NotImplementedException();
+            _produitRepository.Update(data.ToDAL());
         }
+       
+
+       
+
+        public IEnumerable<Produit> GetByCategorie(string Categorie)
+        {
+            return _produitRepository.GetByCategorie(Categorie).Select(d => d.ToBLL());
+        }
+
+        public Produit Get(string NomProduit)
+        {
+            return _produitRepository.Get(NomProduit).ToBLL();
+        }
+
+        public IEnumerable<Produit> GetByCritereEco(string critereEco)
+        {
+            return _produitRepository.GetByCritereEco(critereEco).Select(d => d.ToBLL());
+        }
+
+        
     }
 }

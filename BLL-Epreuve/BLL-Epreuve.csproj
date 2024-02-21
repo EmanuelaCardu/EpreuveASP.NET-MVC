@@ -9,7 +9,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\DAL-Epreuve\DAL-Epreuve.csproj" />
-    <ProjectReference Include="..\DatabaseEpreuve\DatabaseEpreuve.sqlproj" />
     <ProjectReference Include="..\Shared\Shared.csproj" />
   </ItemGroup>
 

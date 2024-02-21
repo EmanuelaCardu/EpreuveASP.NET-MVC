@@ -13,7 +13,7 @@ namespace DAL_Epreuve.Entities
         public string Description { get; set; }
         public decimal PrixProduit { get; set; }
         public string CritereEco {  get; set; }
-        public string Categorie { get; set; }
+        public int Id_Categorie { get; set; }
     }
 }
 

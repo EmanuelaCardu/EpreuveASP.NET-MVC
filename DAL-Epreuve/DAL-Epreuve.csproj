@@ -13,7 +13,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\DatabaseEpreuve\DatabaseEpreuve.sqlproj" />
     <ProjectReference Include="..\Shared\Shared.csproj" />
   </ItemGroup>
 

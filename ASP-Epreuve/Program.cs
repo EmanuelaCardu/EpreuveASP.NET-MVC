@@ -1,3 +1,7 @@
+using Shared.Repositories;
+using DAL = DAL_Epreuve;
+using BLL = BLL_Epreuve;
+
 namespace ASP_Epreuve
 {
     public class Program
@@ -8,6 +12,9 @@ namespace ASP_Epreuve
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+
+            builder.Services.AddScoped<IProduitRepository<BLL.Entities.Produit>, BLL.Services.ProduitService>();
+            builder.Services.AddScoped<IProduitRepository<DAL.Entities.Produit>, DAL.Services.ProduitService>();
 
             var app = builder.Build();
 
