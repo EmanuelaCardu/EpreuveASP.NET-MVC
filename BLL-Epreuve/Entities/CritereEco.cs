@@ -8,10 +8,10 @@ namespace BLL_Epreuve.Entities
 {
     public enum CritereEco
     {
-        CritereEcoA,
-        CritereEcoB,
-        CritereEcoC,
-        CritereEcoD,
-        CritereEcoE
+        A,
+        B,
+        C,
+        D,
+        E
     }
 }

@@ -42,5 +42,46 @@ namespace ASP_Epreuve.Handlers
                 entity.Id_Categorie
                 );
         }
+
+        public static ProduitEditForm ToEdit(this Produit entity)
+        {
+            if (entity is null) return null;
+            return new ProduitEditForm()
+            {
+                Id_Produit = entity.Id_Produit,
+                NomProduit = entity.NomProduit,
+                Description = entity.Description,
+                PrixProduit = entity.PrixProduit,
+                Id_Categorie = entity.Id_Categorie,
+                CritereEco = entity.CritereEco
+            };
+        }
+
+        public static Produit ToBLL(this ProduitEditForm entity)
+        {
+            if (entity is null) return null;
+            return new Produit(
+                entity.Id_Produit,
+                entity.NomProduit,
+                entity.Description,
+                entity.PrixProduit,
+                entity.CritereEco,
+                entity.Id_Categorie
+                );
+        }
+
+        public static ProduitDeleteViewModel ToDelete(this Produit entity)
+        {
+            if (entity is null) return null;
+            return new ProduitDeleteViewModel()
+            {
+                Id_Produit = entity.Id_Produit,
+                NomProduit = entity.NomProduit,
+                Description = entity.Description,
+                PrixProduit = entity.PrixProduit,
+                Id_Categorie = entity.Id_Categorie,
+                CritereEco = entity.CritereEco
+            };
+        }
     }
 }

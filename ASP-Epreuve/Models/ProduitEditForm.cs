@@ -1,12 +1,15 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel;
+using Microsoft.AspNetCore.Mvc;
 
 namespace ASP_Epreuve.Models
 {
-    public class ProduitCreateForm
+    public class ProduitEditForm
     {
-        [ScaffoldColumn (false)]
-      
+        [HiddenInput]
+        [Required]
+
+
         public int Id_Produit { get; set; }
         [DisplayName("Nom du Produit")]
         [Required(ErrorMessage = "Le nom du produit est obligatoire.")]
@@ -27,7 +30,7 @@ namespace ASP_Epreuve.Models
         [DisplayName("Critères ECO")]
         [Required(ErrorMessage = "Le critère Eco du produit est obligatoire.")]
         [RegularExpression("^[ABCDE]$", ErrorMessage = "Veuillez choisir parmi les lettres A, B, C, D ou E.")]
-       
+
         public string CritereEco { get; set; }
 
         [DisplayName("Choisir la categorie du produit")]
