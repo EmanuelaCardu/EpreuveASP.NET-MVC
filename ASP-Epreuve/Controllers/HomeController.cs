@@ -1,4 +1,5 @@
 ﻿using ASP_Epreuve.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -13,8 +14,15 @@ namespace ASP_Epreuve.Controllers
             _logger = logger;
         }
 
+
+
+
         public IActionResult Index()
         {
+            HttpContext.Session.Set("ByteArray", new byte[0]);
+            HttpContext.Session.SetString("Key","value");
+            HttpContext.Session.SetInt32("MyInt32", 42);
+            
             return View();
         }
 
