@@ -5,7 +5,7 @@ namespace ASP_Epreuve.Models
 {
     public class PanierListItemViewModel
     {
-        [ScaffoldColumn(false)]
+        //[ScaffoldColumn(false)]
 
         public int Id_Produit { get; set; }
         [DisplayName("Nom du Produit")]

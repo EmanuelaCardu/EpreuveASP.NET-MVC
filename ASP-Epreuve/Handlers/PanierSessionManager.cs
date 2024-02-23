@@ -31,6 +31,11 @@ namespace ASP_Epreuve.Handlers
             Panier = produits;
         }
 
+        public IEnumerable<Produit> GetProduit()
+        {
+            return Panier;
+        }
+
 
         //public Panier? Panier     //Permet de récupérer les données du panier sauvgardées en session
         //{

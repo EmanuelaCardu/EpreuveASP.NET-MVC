@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel;
+using BLL_Epreuve.Entities;
 
 namespace ASP_Epreuve.Models
 {
@@ -34,5 +35,7 @@ namespace ASP_Epreuve.Models
         [Required(ErrorMessage = "Lla categorie du produit est obligatoire.")]
         //faire ici une liste des categorie
         public int Id_Categorie { get; set; }
+
+        public List<Categorie> Categories { get; set; }
     }
 }

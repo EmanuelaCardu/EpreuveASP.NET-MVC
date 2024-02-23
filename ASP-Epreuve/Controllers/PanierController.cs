@@ -1,7 +1,9 @@
 ﻿using ASP_Epreuve.Handlers;
+using ASP_Epreuve.Models;
 using BLL_Epreuve.Entities;
 using Microsoft.AspNetCore.Mvc;
 using Shared.Repositories;
+using System.Linq;
 
 namespace ASP_Epreuve.Controllers
 {
@@ -18,14 +20,15 @@ namespace ASP_Epreuve.Controllers
 
         public IActionResult Index()
         {
-            return RedirectToAction(nameof(AddToPanier));
+            IEnumerable<PanierListItemViewModel> model = _panier.GetProduit().Select(d => d.ToPanier());
+            return View(model);
         }
 
         public IActionResult AddToPanier(int id)
         {
             Produit pdt = _repo.Get(id);
             _panier.AddProduit(pdt);
-            return RedirectToAction("details", "produit", new { id = id });
+            return RedirectToAction("Index", "produit", new { id = id });
         }
 
     }

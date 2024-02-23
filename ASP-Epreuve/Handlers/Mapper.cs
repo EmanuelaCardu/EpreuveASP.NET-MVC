@@ -30,6 +30,18 @@ namespace ASP_Epreuve.Handlers
             };
         }
 
+        public static PanierListItemViewModel ToPanier(this Produit entity)
+        {
+            if (entity is null) return null;
+            return new PanierListItemViewModel
+            {
+                Id_Produit = entity.Id_Produit,
+                Nom = entity.NomProduit,
+               Prix =entity.PrixProduit,
+               Quantite = 1
+            };
+        }
+
         public static Produit ToBLL(this ProduitCreateForm entity)
         {
             if (entity is null) return null;
