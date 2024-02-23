@@ -1,7 +1,7 @@
 ﻿CREATE PROCEDURE [dbo].[SP_Produit_Insert]
 	@NomProduit varchar (50),
 	@Description varchar (1000),
-	@PrixProduit decimal(18,0),
+	@PrixProduit decimal(18,2),
 	@CritereEco varchar (50),
 	@Id_Categorie int
 AS

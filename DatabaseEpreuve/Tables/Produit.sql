@@ -3,7 +3,7 @@
 	[Id_Produit] INT NOT NULL PRIMARY KEY IDENTITY, 
     [NomProduit] VARCHAR(50) NOT NULL, 
     [Description] VARCHAR(1000) NOT NULL, 
-    [PrixProduit] DECIMAL NOT NULL, 
+    [PrixProduit] DECIMAL(18, 2) NOT NULL, 
     [CritereEco] VARCHAR(50) NOT NULL, 
     [Id_Categorie] INT NOT NULL, 
 

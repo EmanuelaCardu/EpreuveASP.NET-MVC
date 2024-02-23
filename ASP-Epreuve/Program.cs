@@ -11,6 +11,21 @@ namespace ASP_Epreuve
         {
             var builder = WebApplication.CreateBuilder(args);
 
+            //Localization
+            builder.Services.Configure<RequestLocalizationOptions>(options =>
+            {
+                string[] supportedCultures = new string[]
+                {
+                    "en-US",    //Si en-US, alors le pattern des input de prix sera :  pattern="^\d*\.{0,1}\d*$"
+                    "fr-BE"     //Si fr-BE, alors le pattern des input de prix sera :  pattern="^\d*,{0,1}\d*$"
+                };
+                string defaultCulture = supportedCultures[1];   //Choisir la culture (c'est la définision du format selon la région)
+                options.SetDefaultCulture(defaultCulture);      //Définir la culture par défaut
+                //options.AddSupportedCultures(supportedCultures);      //Si multilingue, définir les cultures supportées par le site
+                //options.AddSupportedUICultures(supportedCultures);
+            });
+
+
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 
@@ -50,6 +65,9 @@ namespace ASP_Epreuve
             app.UseStaticFiles();
 
             app.UseRouting();
+
+            //Localization
+            app.UseRequestLocalization();
 
             app.UseAuthorization();
 
