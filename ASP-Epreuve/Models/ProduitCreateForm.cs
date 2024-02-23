@@ -25,7 +25,7 @@ namespace ASP_Epreuve.Models
         [DataType(DataType.Currency)]
 
         public decimal PrixProduit { get; set; }
-        [DisplayName("Critères ECO")]
+        [DisplayName("Critères ECO :inserez une lettre entre A, B, C, D ou E")]
         [Required(ErrorMessage = "Le critère Eco du produit est obligatoire.")]
         [RegularExpression("^[ABCDE]$", ErrorMessage = "Veuillez choisir parmi les lettres A, B, C, D ou E.")]
        
@@ -36,6 +36,7 @@ namespace ASP_Epreuve.Models
         //faire ici une liste des categorie
         public int Id_Categorie { get; set; }
 
-        public List<Categorie> Categories { get; set; }
+        [DisplayName("Liste de Categories")]
+        public IEnumerable<CategorieListItemViewModel>? Categories { get; set; }
     }
 }

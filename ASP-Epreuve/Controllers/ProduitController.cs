@@ -36,7 +36,9 @@ namespace ASP_Epreuve.Controllers
         // GET: ProduitController/Create
         public ActionResult Create()
         {
-            return View();
+            ProduitCreateForm model = new ProduitCreateForm();
+            model.Categories = _categorieRepository.Get().Select(d => d.ToListItem());
+            return View(model);
         }
 
         // POST: ProduitController/Create

@@ -95,5 +95,17 @@ namespace ASP_Epreuve.Handlers
                 CritereEco = entity.CritereEco
             };
         }
+
+        public static CategorieListItemViewModel ToListItem(this Categorie entity)
+        {
+            if (entity is null) return null;
+            return new CategorieListItemViewModel()
+            {
+                Id_Categirie = entity.Id_Categorie,
+                Nom = entity.Nom,
+                Description = entity.Description,
+            };
+
+        }
     }
 }

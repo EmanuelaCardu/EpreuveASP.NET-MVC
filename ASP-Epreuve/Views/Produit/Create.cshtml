@@ -33,8 +33,14 @@
                 <span asp-validation-for="CritereEco" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Id_Categorie" class="control-label"></label>
-                <input asp-for="Id_Categorie" class="form-control" />
+                <label asp-for="Categories" class="control-label"></label>
+                 <select asp-for="Id_Categorie" class="form-select">
+                    <option disabled selected style="display:none;">Veuillez choisir une categorie</option>
+                    @foreach(CategorieListItemViewModel cat in Model.Categories)
+                    {
+                        <option value="@cat.Id_Categirie">@cat.Nom</option>
+                    }
+                </select>
                 <span asp-validation-for="Id_Categorie" class="text-danger"></span>
             </div>
             <div class="form-group">

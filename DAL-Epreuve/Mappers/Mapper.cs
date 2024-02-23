@@ -30,7 +30,7 @@ namespace DAL_Epreuve.Mappers
             return new Categorie()
             {
                 Id_Categorie = (int)record["Id_Categorie"],
-                Nom = (string)record["Nom"],
+                Nom = (string)record["NomCategorie"],
                 Description = (string)record["Description"]
 
             };
