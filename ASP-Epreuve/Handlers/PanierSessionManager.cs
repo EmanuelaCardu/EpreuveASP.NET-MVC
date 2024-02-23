@@ -24,13 +24,13 @@ namespace ASP_Epreuve.Handlers
             }
         }
 
-            public void AddProduit(Produit produit)
+        public void AddProduit(Produit produit)
         {
             List<Produit> produits = new List<Produit>(Panier);
             produits.Add(produit);
             Panier = produits;
         }
-        
+
 
         //public Panier? Panier     //Permet de récupérer les données du panier sauvgardées en session
         //{

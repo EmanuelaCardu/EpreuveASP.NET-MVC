@@ -24,6 +24,16 @@ namespace BLL_Epreuve.Mappers
                 );
         }
 
+        public static BLL.Categorie ToBLL(this DAL.Categorie entity )
+        {
+            if (entity is null) return null;
+            return new BLL.Categorie(
+                entity.Id_Categorie,
+                entity.Nom,
+                entity.Description);
+        }
+
+
         public static DAL.Produit ToDAL(this BLL.Produit entity)
         {
             if (entity is null) return null;
@@ -37,7 +47,20 @@ namespace BLL_Epreuve.Mappers
                 Id_Categorie = entity.Id_Categorie
             };
         }
-       
+
+        public static DAL.Categorie ToDAL(this BLL.Categorie entity)
+        {
+            if (entity is null) return null;
+            return new DAL.Categorie()
+            {
+                Id_Categorie = entity.Id_Categorie,
+                Nom = entity.Nom,
+                Description = entity.Description,
+            };
+        }
+
+
+
 
 
     }

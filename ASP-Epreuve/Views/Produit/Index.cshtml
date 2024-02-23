@@ -34,7 +34,7 @@
                 @Html.ActionLink("Edit", "Edit", new {id = item.Id_Produit }) |
                     @Html.ActionLink("Details", "Details", new { id = item.Id_Produit}) |
                     @Html.ActionLink("Delete", "Delete", new { id = item.Id_Produit }) |
-                    @Html.ActionLink("Panier", "Panier", new { id = item.Id_Produit })
+                    @Html.ActionLink("Ajouter", "AddToPanier", "Panier", new { id = item.Id_Produit })
             </td>
         </tr>
 }

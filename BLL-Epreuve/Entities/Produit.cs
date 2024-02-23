@@ -16,6 +16,8 @@ namespace BLL_Epreuve.Entities
         public string CritereEco { get; set; }
         public int Id_Categorie { get; set; }
 
+        public Categorie Categorie { get; set; }
+
         public Produit(int id_Produit, string nomProduit, string description, decimal prixProduit, string critereEco, int id_Categorie)
         {
             Id_Produit = id_Produit;

@@ -1,6 +1,7 @@
 using Shared.Repositories;
 using DAL = DAL_Epreuve;
 using BLL = BLL_Epreuve;
+using ASP_Epreuve.Handlers;
 
 namespace ASP_Epreuve
 {
@@ -20,7 +21,7 @@ namespace ASP_Epreuve
             {
                 options.Cookie.Name = "AspNetMVC.Session";
                 options.Cookie.HttpOnly = true;
-                options.IdleTimeout = TimeSpan.FromSeconds(10);
+                options.IdleTimeout = TimeSpan.FromMinutes(20);
             });
             builder.Services.Configure<CookiePolicyOptions>(options =>
             {
@@ -31,6 +32,9 @@ namespace ASP_Epreuve
 
             builder.Services.AddScoped<IProduitRepository<BLL.Entities.Produit>, BLL.Services.ProduitService>();
             builder.Services.AddScoped<IProduitRepository<DAL.Entities.Produit>, DAL.Services.ProduitService>();
+            builder.Services.AddScoped<ICategorieRepository<BLL.Entities.Categorie>, BLL.Services.CategorieService>();
+            builder.Services.AddScoped<ICategorieRepository<DAL.Entities.Categorie>, DAL.Services.CategorieService>();
+            builder.Services.AddScoped<PanierSessionManager>();
 
             var app = builder.Build();
 

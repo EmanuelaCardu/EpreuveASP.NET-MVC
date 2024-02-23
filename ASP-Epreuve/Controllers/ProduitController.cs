@@ -11,10 +11,12 @@ namespace ASP_Epreuve.Controllers
     public class ProduitController : Controller
     {
         private readonly IProduitRepository<Produit> _produitRepository;
+        private readonly ICategorieRepository<Categorie> _categorieRepository;
 
-        public ProduitController(IProduitRepository<Produit> produitRepository)
+        public ProduitController(IProduitRepository<Produit> produitRepository, ICategorieRepository<Categorie> categorieRepository)
         {
             _produitRepository = produitRepository;
+            _categorieRepository = categorieRepository;
         }
 
         // GET: ProduitController
